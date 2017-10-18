@@ -73,7 +73,7 @@ def area_calc():
         area(circ(x))
 
     else:
-        print("hi")
+         print("Invalid input, please try again")
 
 
 def vol_calc():
@@ -95,7 +95,7 @@ def vol_calc():
         volume(circ(x))
 
     else:
-        print("hi")
+         print("Invalid input, please try again")
 
 
 #-------------------Start of Program-----------------------------
