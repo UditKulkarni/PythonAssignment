@@ -1,0 +1,117 @@
+Programmers: Udit Kulkarni, Bryan Lo
+Programming Project
+
+#------------------------Defining classes-------------------------
+
+class rect():
+
+    def __init__(self, width, length, height):
+
+        self.width = width
+        self.length = length
+        self.height = height
+
+    def area(self):
+        print ("The area is",(self.width * self.length), "cm^2")
+
+    def volume(self):
+        print ("The area is",(self.width * self.length * self.height), "cm^3")
+
+
+
+class sqre():
+
+    def __init__(self, length):
+
+        self.length = length
+
+    def area(self):
+        print ("The area is",(self.length**2), "cm^2")
+
+    def volume(self):
+        print ("The area is",(self.length**3), "cm^3")   
+
+
+class circ():
+
+    def __init__(self, radius):
+
+        self.radius = radius
+
+    def area(self):
+        print("The area is",(3.14*self.radius**2), "cm^2")
+
+    def volume(self):
+        print ("The area is",((4/3)* 3.14 * self.radius**3), "cm^3") 
+
+
+#-----Polymorphism-------
+def area(shape):
+    shape.area()
+
+def volume(shape):
+    shape.volume()
+
+
+#--------------------------Program Definitions---------------------------
+def area_calc():
+    
+    user_input = int(input("What would you like to solve for (1: Rectangle, 2:Square, 3: Circle): "))
+
+    if user_input == 1:
+        x = int(input("Enter length: "))
+        y = int(input("Enter width: "))
+        z = None
+        area(rect(x,y,z))
+        
+    elif user_input == 2:
+        x = int(input("Enter length: "))
+        area(sqre(x))
+        
+    elif user_input == 3:
+        x = int(input("Enter radius: "))
+        area(circ(x))
+
+    else:
+        print("hi")
+
+
+def vol_calc():
+    
+    user_input = int(input("What would you like to solve for (1: Rectangular prism, 2:Cube, 3: Sphere): "))
+
+    if user_input == 1:
+        x = int(input("Enter length: "))
+        y = int(input("Enter width: "))
+        z = int(input("Enter height: "))
+        volume(rect(x,y,z))
+        
+    elif user_input == 2:
+        x = int(input("Enter length: "))
+        volume(sqre(x))
+        
+    elif user_input == 3:
+        x = int(input("Enter radius: "))
+        volume(circ(x))
+
+    else:
+        print("hi")
+
+
+#-------------------Start of Program-----------------------------
+
+while True:
+    user_input = int(input("What would you like to solve for (1: Area, 2:Volume, 0: Quit): "))
+
+    if user_input == 1:
+        area_calc()
+        
+    elif user_input == 2:
+        vol_calc()
+
+    elif user_input == 0:
+        break
+
+    else:
+        print("Invalid input, please try again")
+
