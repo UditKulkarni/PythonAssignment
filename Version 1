@@ -30,9 +30,14 @@ class circ():
 
         print(3.14*self.radius**2)
 
+#--------------------------Polymorphism---------------------------------
 def area(shape):
     shape.area()
 
+def volume(shape):
+    shape.volume()
+
+#--------------------------------------------------------------------------
 
 x = rect(5,4)
 y = sqre (5)
